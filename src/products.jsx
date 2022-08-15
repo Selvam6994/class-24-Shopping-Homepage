@@ -1,6 +1,6 @@
 import StarRating from 'star-rating-react';
 import cartItems from './cartItems'
-function Products({cardTitle,handleAddToCart,cartItem}) {
+function Products({ cardTitle, handleAddToCart, cartItem }) {
     return (
         <div className="col mb-5">
             <div className="card h-100">
@@ -21,8 +21,8 @@ function Products({cardTitle,handleAddToCart,cartItem}) {
                                 onChange={function (val) { console.log(val) }}
                             /> : ``
                         }
-                        </div> 
-                        {cardTitle.isEnable ? 
+                        </div>
+                        {cardTitle.isEnable ?
                             <span className="text-muted text-decoration-line-through">${cardTitle.cost1}</span> : ``
                         }
                         {cardTitle.isOffer ?
@@ -32,12 +32,12 @@ function Products({cardTitle,handleAddToCart,cartItem}) {
                 </div>
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div className="text-center">
-                        <button disabled={cartItem.some((obj)=>obj.id===cardTitle.id)} onClick={()=>handleAddToCart(cardTitle)} className="btn btn-outline-dark mt-auto" href="#">Add to Cart</button></div>
+                        <button disabled={cartItem.some((obj) => obj.id === cardTitle.id)} onClick={() => handleAddToCart(cardTitle)} className="btn btn-outline-dark mt-auto" href="#">Add to Cart</button></div>
                 </div>
             </div>
         </div>
     )
-        
-    
+
+
 };
 export default Products;

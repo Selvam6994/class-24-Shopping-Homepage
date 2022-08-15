@@ -1,6 +1,5 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Nav from './cartItems.jsx';
 import Head from './header.jsx';
 import Products from './products.jsx';
 import Foot from './footer.jsx';
@@ -8,18 +7,13 @@ import Cart from './cartItems.jsx';
 import Options from './navoptions';
 import React, { useState } from 'react';
 function App() {
-
-
-
     const [cart, setCart] = useState([])
     const [total, setTotal] = useState(0)
-    const [description,setDescription]=useState([{
-        title: "Fancy Product", 
+    const [description, setDescription] = useState([{
+        title: "Fancy Product",
         id: 1,
         cost1: 40,
         cost2: 80,
-
-
     },
     {
         title: "Special Item",
@@ -77,7 +71,7 @@ function App() {
         cost1: 80,
         cost2: 40,
     }
-]);
+    ]);
     let addToCart = (item) => {
         setCart([...cart, item])
         setTotal(total + item.cost2)
